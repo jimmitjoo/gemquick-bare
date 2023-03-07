@@ -1,10 +1,7 @@
 package main
 
 import (
-	"fmt"
-	"myapp/data"
 	"net/http"
-	"strconv"
 
 	"github.com/go-chi/chi/v5"
 )
