@@ -1,36 +1,50 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="min-h-screen">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>{{yield browserTitle()}}</title>
-      <link href="/css/public.css" rel="stylesheet">
-      <meta name="csrf_token" content="{{.CSRFToken}}">
+        <meta charset="UTF-8">
+        <meta name="csrf_token" content="{{.CSRFToken}}">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+        <title>{{yield browserTitle()}}</title>
+        
+        <link href="/public/css/styles.css" rel="stylesheet">
+        <script src="//unpkg.com/alpinejs" defer></script>
+
       {{yield css()}}
 </head>
-<body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
+<body class="min-h-screen bg-gray-50">
+<div class="container mx-auto">
             {{if .Flash }}
-            <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                {{.Flash}}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+                <div class="flex items-center justify-between gap-x-6 bg-gray-900 py-2.5 px-6 sm:pr-3.5 lg:pl-8">
+                    <p class="text-sm leading-6 text-white">
+                        {{.Flash}}
+                    </p>
+                    <button type="button" class="-m-3 flex-none p-3 focus-visible:outline-offset-[-4px]">
+                        <span class="sr-only">Dismiss</span>
+                        <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                        </svg>
+                    </button>
+                </div>
             {{end}}
 
             {{if .Error }}
-            <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                {{.Error}}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+                <div class="flex items-center justify-between gap-x-6 bg-red-700 py-2.5 px-6 sm:pr-3.5 lg:pl-8">
+                    <p class="text-sm leading-6 text-white">
+                        {{.Error}}
+                    </p>
+                    <button type="button" class="-m-3 flex-none p-3 focus-visible:outline-offset-[-4px]">
+                        <span class="sr-only">Dismiss</span>
+                        <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                        </svg>
+                    </button>
+                </div>
             {{end}}
             
             {{yield pageContent()}} 
         </div>
-    </div>
 </div>
 {{yield js()}} 
 </body>
