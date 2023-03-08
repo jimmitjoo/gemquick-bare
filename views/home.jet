@@ -8,13 +8,13 @@
 
 {{block pageContent()}}
 
-<div class="col text-center">
-    <div class="d-flex align-items-center justify-content-center mt-5">
+<div class="container mx-auto">
+    <div class="align-items-center justify-content-center mt-5">
         <div>
             <img src="/public/images/gemquick.jpg" class="mb-5" style="width: 100px;height:auto;">
-            <h1>Gemquick</h1>
+            <h1 class="text-3xl font-bold underline">Gemquick</h1>
             <hr>
-            <small class="text-muted">Go build something awesome</small>
+            <p class="text-gray-500">Go build something awesome</small>
         </div>
     </div>
 </div>
