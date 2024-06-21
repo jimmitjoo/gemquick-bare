@@ -784,6 +784,8 @@ github.com/jaytaylor/html2text v0.0.0-20190408195923-01ec452cbe43/go.mod h1:CVKl
 github.com/jhillyerd/enmime v0.8.0/go.mod h1:MBHs3ugk03NGjMM6PuRynlKf+HA5eSillZ+TRCm73AE=
 github.com/jimmitjoo/gemquick v0.0.0-20230307095027-40e206f9cfd6 h1:+FRJyhMLSblsPaYvO3cqCsb3VrYhNbutgk4OlXVSZk0=
 github.com/jimmitjoo/gemquick v0.0.0-20230307095027-40e206f9cfd6/go.mod h1:/zLZyFeGlLf6Z/ehnG+EdANknf6rZ95OGP7sHz2KsGc=
+github.com/jimmitjoo/gemquick v0.0.7 h1:FP9UTcRSCcOAEIvvduL1hdMUOxj9V5xGT+crSasR9so=
+github.com/jimmitjoo/gemquick v0.0.7/go.mod h1:/zLZyFeGlLf6Z/ehnG+EdANknf6rZ95OGP7sHz2KsGc=
 github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
 github.com/jinzhu/now v1.1.1/go.mod h1:d3SSVoowX0Lcu0IBviAWJpolVfI5UJVZZ7cO71lE/z8=
 github.com/jmespath/go-jmespath v0.0.0-20160202185014-0b12d6b521d8/go.mod h1:Nht3zPeWKUH0NzdCt2Blrr5ys8VGpn0CEB0cQHVjt7k=
