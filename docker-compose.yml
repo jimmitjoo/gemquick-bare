@@ -24,6 +24,20 @@ services:
     volumes:
       - ./db-data/redis/:/data
 
+  # start Minio, and ensure that data is stored to a mounted volume
+  minio:
+    image: 'quay.io/minio/minio'
+    command: server /mnt/data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    restart: always
+    environment:
+      MINIO_ROOT_USER: root
+      MINIO_ROOT_PASSWORD: password
+    volumes:
+      - ./db-data/minio/:/mnt/data
+
   #  start MariaDB, and ensure that data is stored to a mounted volume
   mariadb:
     image: 'mariadb:10.6'
